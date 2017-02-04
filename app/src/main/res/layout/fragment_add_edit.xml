@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/new_contact"
+        android:id="@+id/textView"
+        android:layout_row="1"
+        android:layout_column="0"
+        android:textAlignment="center"
+        android:gravity="center|center_horizontal"
+        android:background="#c1c9f4"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="40dp"
+        android:gravity="center" >
+
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp" >
+
+            <QuickContactBadge
+                android:id="@+id/activity_add_contact_profile"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/default_portrait" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="18dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="#000"
+                android:gravity="center" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Edit"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    android:id="@+id/edit_contact_photo"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/add_edit_scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="1"
+        android:orientation="vertical"
+        android:useDefaultMargins="true"
+        android:paddingBottom="@dimen/activity_horizontal_margin"
+        android:id="@+id/add_edit_gridLayout">
+
+
+
+        <EditText
+            android:id="@+id/name_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_name"
+            android:imeOptions="actionNext"
+            android:inputType="textPersonName|textCapWords"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/activity_vertical_margin">
+        </EditText>
+
+
+        <EditText
+            android:id="@+id/phone_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_phone"
+            android:imeOptions="actionNext"
+            android:inputType="phone"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/activity_vertical_margin">
+        </EditText>
+
+        <EditText
+            android:id="@+id/email_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_email"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress"
+            android:layout_row="4"
+            android:layout_column="0"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/activity_vertical_margin">
+        </EditText>
+
+        <EditText
+            android:id="@+id/street_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_street"
+            android:imeOptions="actionNext"
+            android:inputType="textPostalAddress|textCapWords"
+            android:layout_row="5"
+            android:layout_column="0"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/activity_vertical_margin">
+        </EditText>
+
+        <EditText
+            android:id="@+id/city_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_city"
+            android:imeOptions="actionNext"
+            android:inputType="textPostalAddress|textCapWords"
+            android:layout_row="6"
+            android:layout_column="0"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/activity_vertical_margin">
+        </EditText>
+
+        <EditText
+            android:id="@+id/state_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_state"
+            android:imeOptions="actionNext"
+            android:inputType="textPostalAddress|textCapCharacters"
+            android:layout_row="7"
+            android:layout_column="0"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/activity_vertical_margin">
+        </EditText>
+
+        <EditText
+            android:id="@+id/zip_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_zip"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:layout_row="8"
+            android:layout_column="0"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/activity_vertical_margin">
+        </EditText>
+
+
+        <Button
+            android:id="@+id/save_contact_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/button_save_contact"
+            android:layout_row="10"
+            android:layout_column="0"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/activity_vertical_margin">
+        </Button>
+
+        <Button
+            android:id="@+id/back_button"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/button_back"
+            android:layout_row="11"
+            android:layout_column="0"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/activity_vertical_margin">
+        </Button>
+
+    </GridLayout>
+
+</ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/add_contact_popup_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </RelativeLayout>
+
+</LinearLayout>
